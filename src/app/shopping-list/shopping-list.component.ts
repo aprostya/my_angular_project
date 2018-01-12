@@ -17,9 +17,13 @@ export class ShoppingListComponent implements OnInit {
     this.ingredients.push(ingredient);
     console.log('ing pushes');
   }
-  onIngridientDelete(ingredient: Ingredient) {
-    this.ingredients.splice(1);
+  onIngridientDelete() {
+    this.ingredients.pop();
     console.log('delete');
+  }
+
+  onIngridientClear() {
+    this.ingredients.length = 0;
   }
   ngOnInit() {
   }

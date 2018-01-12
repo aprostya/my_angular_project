@@ -8,7 +8,8 @@ import {Ingredient} from '../../shared/ingridient.model';
 })
 export class ShoppingEditComponent implements OnInit {
   @Output() itemCreated = new EventEmitter<Ingredient>();
-  @Output('itemClear') itemDelete = new EventEmitter<Ingredient>();
+  @Output() itemDelete = new EventEmitter<Ingredient>();
+  @Output() itemClear = new EventEmitter<Ingredient>();
   // newServerName = '';
   // newServerContent = '';
   @ViewChild('serverContentInput') serverContentInput: ElementRef;
@@ -27,6 +28,13 @@ export class ShoppingEditComponent implements OnInit {
       const newIngredient = new Ingredient(newAmount, ingAmount);
       this.itemDelete.emit(newIngredient);
       console.log('I am trying to delete');
+    }
+    onClearItem() {
+      const newAmount = this.serverContentInput.nativeElement.value;
+      const ingAmount = this.amountInputRef.nativeElement.value;
+      const newIngredient = new Ingredient(newAmount, ingAmount);
+      this.itemClear.emit(newIngredient);
+      console.log('I am trying to clear');
     }
   ngOnInit() {
   }
