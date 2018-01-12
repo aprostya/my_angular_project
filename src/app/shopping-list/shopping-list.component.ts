@@ -13,7 +13,14 @@ export class ShoppingListComponent implements OnInit {
   ];
   constructor() {
   }
-
+  onIngredientAdded(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+    console.log('ing pushes');
+  }
+  onIngridientDelete(ingredient: Ingredient) {
+    this.ingredients.splice(1);
+    console.log('delete');
+  }
   ngOnInit() {
   }
 }
