@@ -11,6 +11,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import {HttpModule} from '@angular/http';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -5,13 +5,13 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h1>Name</h1>
+    <h1>{{detailedRecipe.name}}</h1>
   </div>
 </div>
 <div class="row">
 <div class="col-xs-12">
-  <div class="btn-group">
-    <button type="button" class="btn btn-primary dropdown-toggle">Manage Recipe <span class="caret"></span> </button>
+  <div class="btn-group" appDropDown>
+    <button type="button" class="btn btn-primary dropdown-toggle">Manage Recipe <span class="caret"></span></button>
   </div>
   <ul class="dropdown-menu">
     <li><a href="#">Add Ingridients to Shopping List</a></li>
@@ -22,11 +22,12 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    {{ detailedRecipe.description}}
+    {{detailedRecipe.description}}
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    Ingridients
+    <img [src]="detailedRecipe.imagePath" alt="{{detailedRecipe.name}}" class="img-responsive">
+    <!--<img [src] ="detailedRecipe.imagePath"  class="img-responsive" alt ="{{detailedRecipe.description}})>-->
   </div>
 </div>
